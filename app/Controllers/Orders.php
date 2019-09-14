@@ -31,4 +31,5 @@ class Orders extends BaseController
         return json_encode(['message' => 'Order added successfully']);
         // return json_encode($products);
     }
+
 }
