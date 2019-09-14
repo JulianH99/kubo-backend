@@ -15,19 +15,22 @@ class Orders extends BaseController
 
     public function checkout()
     {
-        $orderModel = new OrderModel();
-        $data = json_decode($this->request->getBody());
+        try {
+            $orderModel = new OrderModel();
+            $data = json_decode($this->request->getBody());
 
-        $products = $data->products;
-        $price = $data->price;
+            $products = $data->products;
+            $price = $data->price;
 
-        $orderId = $orderModel->insert([
-            'order_date' => date('Y-m-d H:i:s'),
-            'total_price' => $price
-        ]);
+            $orderId = $orderModel->insert([
+                'order_date' => date('Y-m-d H:i:s'),
+                'total_price' => $price
+            ]);
 
-        $orderModel->insertProds($orderId, $products);
+            $orderModel->insertProds($orderId, $products);
+        } catch (\Exception $e) {
+            return $e->getMessage();
+        }
         // return json_encode($products);
     }
-
 }
