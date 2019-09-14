@@ -33,10 +33,10 @@ class Database extends \CodeIgniter\Database\Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => 'localhost',
-		'username' => 'root',
-		'password' => 'sabertooth99',
-		'database' => 'store',
+		'hostname' => 'mwgmw3rs78pvwk4e.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+		'username' => 'wiu7luz67k0quhl4',
+		'password' => 'waxl9vi9w81hbpcz',
+		'database' => 'd6wqz9vajua94nc7',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,
