@@ -27,8 +27,6 @@ class Orders extends BaseController
         ]);
 
         $orderModel->insertProds($orderId, $products);
-
-        return json_encode(['message' => 'Order added successfully']);
         // return json_encode($products);
     }
 

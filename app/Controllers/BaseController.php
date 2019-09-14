@@ -34,7 +34,7 @@ class BaseController extends Controller
 	 */
 	public function initController(\CodeIgniter\HTTP\RequestInterface $request, \CodeIgniter\HTTP\ResponseInterface $response, \Psr\Log\LoggerInterface $logger)
 	{
-		header('Access-Control-Allow-Origin: https://affectionate-keller-ec53fe.netlify.com/');
+		header('Access-Control-Allow-Origin: https://affectionate-keller-ec53fe.netlify.com');
 		header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 		header('Access-Control-Allow-Headers: content-type');
 		// Do Not Edit This Line
